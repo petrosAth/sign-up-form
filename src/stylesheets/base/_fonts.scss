@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@use "../abstracts/" as a;
+
+@font-face {
+  font-family: "norsebold";
+  src: a.font("norse-bold-webfont.woff2") format("woff2"),
+    a.font("norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
