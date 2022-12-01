@@ -26,11 +26,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: a.$brand-color;
+  color: a.$color-main;
   text-decoration: none;
 
   @include a.on-event {
-    color: a.$text-color;
+    color: a.$text-color-dark;
     text-decoration: underline;
   }
 }

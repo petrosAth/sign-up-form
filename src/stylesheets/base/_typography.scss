@@ -4,6 +4,6 @@
 @use "../abstracts/" as a;
 
 body {
-  color: a.$text-color;
+  color: a.$text-color-dark;
   font: normal 125% / 1.4 a.$text-font-stack;
 }

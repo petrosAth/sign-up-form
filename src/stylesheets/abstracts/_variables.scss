@@ -2,70 +2,84 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'norsebold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "norsebold", "Open Sans", "Helvetica Neue Light",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
 
+// -----------------------------------------------------------------------------
 
-
-
-
-/// Copy text color
+/// Main color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$color-main: hsl(195, 90%, 75%);
 
-/// Main brand color
+/// Accent color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$color-accent: hsl(345, 70%, 50%);
 
-/// Light grey
+/// Gray shades
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+$color-gray-0: hsl(45, 80%, 8%);
+$color-gray-1: hsl(45, 10%, 18%);
+$color-gray-2: hsl(45, 10%, 28%);
+$color-gray-3: hsl(45, 10%, 38%);
+$color-gray-4: hsl(45, 10%, 48%);
+$color-gray-5: hsl(45, 10%, 58%);
+$color-gray-6: hsl(45, 10%, 68%);
+$color-gray-7: hsl(45, 10%, 78%);
+$color-gray-8: hsl(45, 10%, 88%);
+$color-gray-9: hsl(45, 10%, 98%);
 
-/// Medium grey
+/// Main text color
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+$text-color-light: $color-gray-9;
 
-/// Dark grey
+/// Secondary text color
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$text-color-dark: $color-gray-0;
 
+// -----------------------------------------------------------------------------
 
+/// Main gradient
+/// @type String
+$gradient-main: to top left;
 
+// -----------------------------------------------------------------------------
 
+/// Main scheme
+/// @type Variable
+$scheme-main: $text-color-dark, $color-main;
+// $scheme-main: $text-color-dark, ($color-accent, $color-main);
+
+/// Accent scheme
+/// @type Variable
+$scheme-secondary: $text-color-light, $color-accent;
+
+// -----------------------------------------------------------------------------
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
 
-
-
-
-
+// -----------------------------------------------------------------------------
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
 ) !default;
 
-
-
-
-
+// -----------------------------------------------------------------------------
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: '.' !default;
+$base-url: "." !default;
