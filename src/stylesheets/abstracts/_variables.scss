@@ -2,46 +2,52 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+/// Big text font family
+/// @type List
+$font-stack-xl: "norsebold", "Open Sans", "Helvetica Neue Light",
+  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
 /// Regular font family
 /// @type List
-$text-font-stack: "norsebold", "Open Sans", "Helvetica Neue Light",
+$font-stack-text: "Roboto", "Open Sans", "Helvetica Neue Light",
   "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+$font-stack-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
   "Monaco", monospace !default;
+
+// Big text font size
+$font-size-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+$font-size-600: 2rem;
+$font-size-500: 1.5rem;
+$font-size-400: 1rem;
 
 // -----------------------------------------------------------------------------
 
 /// Main color
 /// @type Color
-$color-main: hsl(195, 90%, 75%);
+$color-main: hsl(196, 95%, 23%);
 
 /// Accent color
 /// @type Color
-$color-accent: hsl(345, 70%, 50%);
-
-/// Gray shades
-/// @type Color
-$color-gray-0: hsl(45, 80%, 8%);
-$color-gray-1: hsl(45, 10%, 18%);
-$color-gray-2: hsl(45, 10%, 28%);
-$color-gray-3: hsl(45, 10%, 38%);
-$color-gray-4: hsl(45, 10%, 48%);
-$color-gray-5: hsl(45, 10%, 58%);
-$color-gray-6: hsl(45, 10%, 68%);
-$color-gray-7: hsl(45, 10%, 78%);
-$color-gray-8: hsl(45, 10%, 88%);
-$color-gray-9: hsl(45, 10%, 98%);
+$color-accent: hsl(28, 86%, 65%);
 
 /// Main text color
 /// @type Color
-$text-color-light: $color-gray-9;
+$color-text-light: hsl(0, 0%, 87%);
 
-/// Secondary text color
+/// Accent text color
 /// @type Color
-$text-color-dark: $color-gray-0;
+$color-text-dark: hsl(196, 95%, 8%);
+
+/// Background dark color
+/// @type Color
+$color-background-dark: hsl(196, 95%, 13%);
+
+/// Background dark color
+/// @type Color
+$color-background-light: hsl(196, 95%, 18%);
 
 // -----------------------------------------------------------------------------
 
@@ -51,14 +57,21 @@ $gradient-main: to top left;
 
 // -----------------------------------------------------------------------------
 
-/// Main scheme
+/// Base scheme
 /// @type Variable
-$scheme-main: $text-color-dark, $color-main;
-// $scheme-main: $text-color-dark, ($color-accent, $color-main);
+$scheme-base: $color-text-light, $color-background-dark;
+
+/// Float scheme
+/// @type Variable
+$scheme-float: $color-text-light, $color-background-light;
+
+/// Overlay scheme
+/// @type Variable
+$scheme-overlay: $color-text-light, $color-background-dark;
 
 /// Accent scheme
 /// @type Variable
-$scheme-secondary: $text-color-light, $color-accent;
+$scheme-accent: $color-text-dark, $color-accent;
 
 // -----------------------------------------------------------------------------
 

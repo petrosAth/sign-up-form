@@ -3,7 +3,43 @@
  */
 @use "../abstracts/" as a;
 
+//Import Roboto font family
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+
+h1 {
+  font-family: a.$font-stack-xl;
+  font-size: a.$font-size-xl;
+  color: a.$color-text-light;
+}
+
+h2,
+h3 {
+  font-family: a.$font-stack-text;
+  color: a.$color-text-light;
+}
+
+h2 {
+  font-size: a.$font-size-600;
+}
+
+h3 {
+  font-size: a.$font-size-500;
+}
+
+a {
+  &:visited,
+  &:active {
+    color: a.$color-accent;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 body {
-  color: a.$text-color-dark;
-  font: normal 125% / 1.4 a.$text-font-stack;
+  @include a.color-scheme(a.$scheme-base...);
+  // font-family: a.$font-stack-text;
+  font-size: a.$font-size-400;
+  // color: a.$color-text-dark;
 }
