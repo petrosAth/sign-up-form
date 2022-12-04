@@ -8,39 +8,66 @@
     <title>Sign up!</title>
   </head>
   <body>
-    <div class="sign-up grid__third">
-      <div class="background-image">
-        <div class="logo">
-          <div class="logo__image"></div>
-          <div class="logo__text"><h1>ODIN</h1></div>
+    <div class="sign-up grid grid__hor">
+      <div class="background-image grid">
+        <div class="logo-overlay grid flex">
+          <div class="logo-overlay__image flex">
+            <img src="./images/odin-lined.png" alt="" />
+          </div>
+          <div class="logo-overlay__text"><h1>ODIN</h1></div>
         </div>
         <div class="background-image__credit">
           Photo by
-          <a
-            href="https://unsplash.com/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          <a href="https://unsplash.com/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
             >Tom Barrett</a
           >
           on
-          <a
-            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
             >Unsplash</a
           >
         </div>
       </div>
-      <div class="sign-up__info">
-        <div class="section__flat">
+      <div class="sign-up__info grid grid__ver">
+        <div class="section">
           <h2 class="sign-up__info__text__message">
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams.<br />Sign
-            up now to get started.
+            This is not a real online service! You know you need something like this in your life to help you realize
+            your deepest dreams.<br />Sign up now to get started.
           </h2>
           <h2 class="sign-up__info__text__action">You know you want to.</h2>
         </div>
         <div class="section__float">
-          <h2>Let's do this!</h2>
+          <form class="sign-up__form">
+            <h2>Let's do this!</h2>
+            <div class="sign-up__form__first-name">
+              <label for="sign-up__form__first-name">First Name</label>
+              <input type="text" id="sign-up__form__first-name" name="first_name" />
+            </div>
+            <div class="sign-up__form__last-name">
+              <label for="sign-up__form__last-name">Last Name</label>
+              <input type="text" id="sign-up__form__last-name" name="last_name" />
+            </div>
+            <div class="sign-up__form__email">
+              <label for="sign-up__form__email">Email</label>
+              <input type="text" id="sign-up__form__email" name="email" />
+            </div>
+            <div class="sign-up__form__phone-number">
+              <label for="sign-up__form__phone-number">Phone Number</label>
+              <input type="tel" id="sign-up__form__phone-number" name="phone_number" />
+            </div>
+            <div class="sign-up__form__password">
+              <label for="sign-up__form__password">Password</label>
+              <input type="password" id="sign-up__form__password" name="password" />
+            </div>
+            <div class="sign-up__form__confirm-password">
+              <label for="sign-up__form__confirm-password">Confirm Password</label>
+              <input type="password" id="sign-up__form__confirm-password" name="confirm_password" />
+            </div>
+          </form>
         </div>
-        <div class="section__flat">
-          <div class="button"></div>
+        <div class="section">
+          <div class="button">
+            <button>Create Account</button>
+          </div>
           <div class="sign-up__info__submit__login">
             <h3>Already have an account?</h3>
           </div>
