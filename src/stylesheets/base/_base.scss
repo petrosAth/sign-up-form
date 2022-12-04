@@ -11,6 +11,14 @@ html {
 }
 
 /**
+ * Make the page content fill the whole browser window
+ */
+html,
+body {
+  height: 100vh;
+}
+
+/**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
@@ -20,6 +28,15 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+/**
+ * Remove default margin
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 /**
@@ -33,4 +50,14 @@ a {
     color: a.$color-text-dark;
     text-decoration: underline;
   }
+}
+
+/**
+ * Make images easier to work with
+ */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
 }

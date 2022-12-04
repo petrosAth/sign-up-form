@@ -26,16 +26,16 @@ h3 {
   font-size: a.$font-size-500;
 }
 
-a {
-  &:visited,
-  &:active {
-    color: a.$color-accent;
-    text-decoration: none;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// a {
+//   &:visited,
+//   &:active {
+//     color: a.$color-accent;
+//     text-decoration: none;
+//   }
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 body {
   @include a.color-scheme(a.$scheme-base...);
