@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "../abstracts" as a;
+
+.logo-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  margin-top: 40%;
+  background-color: color.adjust(a.$color-background-dark, $alpha: -0.4);
+
+  h1 {
+    text-transform: capitalize;
+    font-family: a.$font-stack-xl;
+    font-size: a.$font-size-xl;
+    color: a.$color-text-light;
+    margin-block: 0;
+  }
+
+  &__image {
+    padding: 2%;
+    height: inherit;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

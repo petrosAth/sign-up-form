@@ -47,7 +47,6 @@ a {
   text-decoration: none;
 
   @include a.on-event {
-    color: a.$color-text-dark;
     text-decoration: underline;
   }
 }
@@ -55,9 +54,9 @@ a {
 /**
  * Make images easier to work with
  */
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
-}
+// img,
+// picture,
+// svg {
+//   max-width: 100%;
+//   display: block;
+// }

@@ -6,12 +6,7 @@
 //Import Roboto font family
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 
-h1 {
-  font-family: a.$font-stack-xl;
-  font-size: a.$font-size-xl;
-  color: a.$color-text-light;
-}
-
+h1,
 h2,
 h3 {
   font-family: a.$font-stack-text;
@@ -26,16 +21,12 @@ h3 {
   font-size: a.$font-size-500;
 }
 
-// a {
-//   &:visited,
-//   &:active {
-//     color: a.$color-accent;
-//     text-decoration: none;
-//   }
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// }
+a {
+  &:visited,
+  &:active {
+    color: a.$color-accent;
+  }
+}
 
 body {
   @include a.color-scheme(a.$scheme-base...);

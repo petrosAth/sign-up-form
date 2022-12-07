@@ -4,21 +4,18 @@
 
 /// Big text font family
 /// @type List
-$font-stack-xl: "norsebold", "Open Sans", "Helvetica Neue Light",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-stack-xl: "norsebold", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Regular font family
 /// @type List
-$font-stack-text: "Roboto", "Open Sans", "Helvetica Neue Light",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-stack-text: "Roboto", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
-$font-stack-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-  "Monaco", monospace !default;
+$font-stack-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
 // Big text font size
-$font-size-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+$font-size-xl: clamp(3.5rem, 12vw + 1rem, 6rem);
 $font-size-600: 2rem;
 $font-size-500: 1.5rem;
 $font-size-400: 1rem;

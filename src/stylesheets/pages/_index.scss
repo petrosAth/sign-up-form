@@ -1,7 +1,2 @@
 @forward "home";
-
-@use "../abstracts" as a;
-
-p {
-  @include a.color-scheme(a.$scheme-base...);
-}
+@forward "sign-up";
