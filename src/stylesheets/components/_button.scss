@@ -7,7 +7,7 @@
   @include a.text-setting("base");
   background-color: a.theme-color("primary", "base");
   color: a.theme-color("dark", "base");
-  margin-block-end: 2em;
-  padding: 0.75em 3em;
+  margin-block-end: 2rem;
+  padding: 0.75rem 3rem;
   border-radius: a.$border-radius;
 }

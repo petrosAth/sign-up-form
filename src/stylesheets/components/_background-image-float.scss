@@ -8,4 +8,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  &__credit {
+    @include a.text-setting("xs");
+    padding: 0.5rem;
+    a {
+      text-decoration: underline;
+    }
+  }
 }

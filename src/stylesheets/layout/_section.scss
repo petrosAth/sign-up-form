@@ -3,6 +3,7 @@
 .section {
   color: a.theme-color("light", "base");
   background-color: a.theme-color("background");
+  width: 90%;
   &__float {
     color: a.theme-color("light", "base");
     background-color: a.theme-color("foreground");

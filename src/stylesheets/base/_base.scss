@@ -44,11 +44,11 @@ body {
  */
 a {
   color: a.theme-color("primary");
-  text-decoration: underline;
+  text-decoration: none;
 
-  @include a.on-event {
-    text-decoration: none;
-  }
+  // @include a.on-event {
+  //   text-decoration: none;
+  // }
 }
 
 /**

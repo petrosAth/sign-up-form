@@ -23,6 +23,7 @@ h2 {
 
 h3 {
   @include a.text-setting("base");
+  font-weight: 500;
 }
 
 a {
