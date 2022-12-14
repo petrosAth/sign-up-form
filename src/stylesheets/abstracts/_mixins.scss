@@ -1,8 +1,10 @@
-@use "sass:list";
-@use "./variables" as v;
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+@use "sass:list";
+
+@use "./variables" as v;
+@use "./functions" as f;
 
 /// Event wrapper
 /// @author Harry Roberts
@@ -36,16 +38,10 @@
   }
 }
 
-/// Apply text and background color
+/// Apply text size and line height
 /// @autor Petros Athanasoulis
-/// @param {Color} $text
-/// @param {Color|Color[]} $bg If there is more than one color, set a gradient
-@mixin color-scheme($text, $bg, $grad: v.$gradient-main) {
-  @if list.length($bg) == 1 {
-    background-color: $bg;
-  } @else {
-    background-image: linear-gradient($grad, $bg);
-  }
-  background-color: $bg;
-  color: $text;
+/// @param {String} $size
+@mixin text-setting($size) {
+  font-size: f.text-scale($size);
+  line-height: f.line-height($size);
 }

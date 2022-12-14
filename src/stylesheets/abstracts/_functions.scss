@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
+@use "sass:color";
+
 @use "./variables" as v;
 
 /// Native `url(..)` function wrapper
@@ -18,7 +20,7 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: v.$base-url) {
-  @return asset($base, 'images/', $path);
+  @return asset($base, "images/", $path);
 }
 
 /// Returns URL to a font based on its path
@@ -27,5 +29,18 @@
 /// @return {Url}
 /// @require $base-url
 @function font($path, $base: v.$base-url) {
-  @return asset($base, './fonts/', $path);
+  @return asset($base, "./fonts/", $path);
+}
+
+@function text-scale($size) {
+  @return map-get(map-get(v.$text-settings, $size), "font-size");
+}
+
+@function line-height($size) {
+  @return map-get(map-get(v.$text-settings, $size), "line-height");
+}
+
+@function theme-color($key: "primary", $variant: "base", $alpha: 0) {
+  $map: map-get(v.$theme-colors, $key);
+  @return color.adjust(map-get($map, $variant), $alpha: $alpha);
 }

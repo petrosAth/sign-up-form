@@ -2,29 +2,58 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Big text font family
-/// @type List
-$font-stack-xl: "norsebold", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-
 /// Regular font family
 /// @type List
 $font-stack-text: "Roboto", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
+/// Accent font family
+/// @type List
+$font-stack-accent: "norsebold", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
 $font-stack-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
 
-// Big text font size
-$font-size-xl: clamp(3.5rem, 12vw + 1rem, 6rem);
-$font-size-600: 2rem;
-$font-size-500: 1.5rem;
-$font-size-400: 1rem;
+// Text base font size
+$base-font-size: 1rem;
+
+// Text line height
+$base-line-height: 1.25 * $base-font-size;
+
+// Text font sizes
+$text-settings: (
+  "xs": (
+    font-size: 0.75rem,
+    line-height: $base-line-height * 0.75,
+  ),
+  "sm": (
+    font-size: 0.875rem,
+    line-height: $base-line-height * 0.875,
+  ),
+  "base": (
+    font-size: $base-font-size,
+    line-height: $base-line-height,
+  ),
+  "md": (
+    font-size: 1.5rem,
+    line-height: $base-line-height * 1.5,
+  ),
+  "lg": (
+    font-size: 2rem,
+    line-height: $base-line-height * 2,
+  ),
+  "xl": (
+    font-size: clamp(3.5rem, 12vw + 1rem, 6rem),
+    line-height: $base-line-height * 2,
+  ),
+);
 
 // -----------------------------------------------------------------------------
+@use "sass:color";
 
-/// Main color
+/// Primary color
 /// @type Color
-$color-main: hsl(196, 95%, 23%);
+$color-primary: hsl(28, 86%, 65%);
 
 /// Accent color
 /// @type Color
@@ -38,37 +67,48 @@ $color-text-light: hsl(0, 0%, 87%);
 /// @type Color
 $color-text-dark: hsl(196, 95%, 8%);
 
-/// Background dark color
+/// Foreground color
 /// @type Color
-$color-background-dark: hsl(196, 95%, 13%);
+$color-foreground: hsl(196, 95%, 23%);
 
-/// Background dark color
+/// Background color
 /// @type Color
-$color-background-light: hsl(196, 95%, 18%);
+$color-background: hsl(196, 95%, 13%);
 
-// -----------------------------------------------------------------------------
-
-/// Main gradient
-/// @type String
-$gradient-main: to top left;
-
-// -----------------------------------------------------------------------------
-
-/// Base scheme
-/// @type Variable
-$scheme-base: $color-text-light, $color-background-dark;
-
-/// Float scheme
-/// @type Variable
-$scheme-float: $color-text-light, $color-background-light;
-
-/// Overlay scheme
-/// @type Variable
-$scheme-overlay: $color-text-light, $color-background-dark;
-
-/// Accent scheme
-/// @type Variable
-$scheme-accent: $color-text-dark, $color-accent;
+/// Theme colors
+/// @type table
+$theme-colors: (
+  "primary": (
+    "light": lighten($color-primary, 5),
+    "base": $color-primary,
+    "dark": darken($color-primary, 5),
+    "disabled": color.adjust($color-primary, $alpha: -0.5),
+  ),
+  "accent": (
+    "light": lighten($color-accent, 5),
+    "base": $color-accent,
+    "dark": darken($color-accent, 5),
+    "disabled": color.adjust($color-accent, $alpha: -0.5),
+  ),
+  "light": (
+    "light": lighten($color-text-light, 5),
+    "base": $color-text-light,
+    "dark": darken($color-text-light, 5),
+    "disabled": color.adjust($color-text-light, $alpha: -0.5),
+  ),
+  "dark": (
+    "light": lighten($color-text-dark, 5),
+    "base": $color-text-dark,
+    "dark": darken($color-text-dark, 5),
+    "disabled": color.adjust($color-text-dark, $alpha: -0.5),
+  ),
+  "background": (
+    "light": lighten($color-background, 5),
+    "base": hsl(196, 95%, 13%),
+    "dark": darken($color-background, 5),
+    "disabled": color.adjust($color-background, $alpha: -0.5),
+  ),
+);
 
 // -----------------------------------------------------------------------------
 

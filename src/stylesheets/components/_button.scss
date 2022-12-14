@@ -1,3 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+@use "../abstracts" as a;
+
+.button {
+  @include a.text-setting("base");
+  background-color: a.theme-color("primary", "base");
+  color: a.theme-color("dark", "base");
+  padding: 0.75em 3em;
+  border-radius: 0.5em;
+}

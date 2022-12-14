@@ -6,19 +6,19 @@
 //Import Roboto font family
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
 
+h1 {
+  @include a.text-setting("xl");
+}
+
 h1,
 h2,
 h3 {
   font-family: a.$font-stack-text;
-  color: a.$color-text-light;
 }
 
-h2 {
-  font-size: a.$font-size-600;
-}
-
+h2,
 h3 {
-  font-size: a.$font-size-500;
+  @include a.text-setting("md");
 }
 
 a {
@@ -29,8 +29,11 @@ a {
 }
 
 body {
-  @include a.color-scheme(a.$scheme-base...);
-  // font-family: a.$font-stack-text;
-  font-size: a.$font-size-400;
-  // color: a.$color-text-dark;
+  font-family: a.$font-stack-text;
+  background-color: a.theme-color("background", "base");
+  @include a.text-setting("base");
+}
+
+button {
+  @include a.text-setting("base");
 }

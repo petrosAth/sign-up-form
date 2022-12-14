@@ -2,14 +2,18 @@
 
 .sign-up {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 37.5% 62.5%;
   height: 100%;
 
   &__info {
     display: grid;
-    grid-template-rows: 35% 30% 35%;
+    grid-template-rows: 1fr auto 1fr;
 
-    div {
+    [class^="section"] {
+      padding: 2vh 5vh;
+    }
+
+    .section {
       &:first-of-type {
         align-self: flex-end;
       }

@@ -43,7 +43,7 @@ body {
  * Basic styles for links
  */
 a {
-  color: a.$color-main;
+  color: a.$color-primary;
   text-decoration: none;
 
   @include a.on-event {
@@ -54,9 +54,15 @@ a {
 /**
  * Make images easier to work with
  */
-// img,
-// picture,
-// svg {
-//   max-width: 100%;
-//   display: block;
-// }
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  background-color: unset;
+  display: inline-block;
+}

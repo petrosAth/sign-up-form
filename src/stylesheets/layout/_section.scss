@@ -1,8 +1,10 @@
 @use "../abstracts/" as a;
 
 .section {
-  @include a.color-scheme(a.$scheme-base...);
+  color: a.theme-color("light", "base");
+  background-color: a.theme-color("background", "base");
   &__float {
-    @include a.color-scheme(a.$scheme-float...);
+    color: a.theme-color("light", "base");
+    background-color: a.theme-color("background", "light");
   }
 }
