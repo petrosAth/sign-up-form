@@ -1,0 +1,37 @@
+@use "../abstracts" as a;
+
+.form {
+  padding-bottom: 1em;
+  h2 {
+    padding-bottom: 1em;
+  }
+  &__data {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    gap: 1em;
+
+    > * {
+      > label {
+        text-transform: uppercase;
+        @include a.text-setting("xs");
+        font-weight: 600;
+        letter-spacing: 0.15em;
+      }
+      > input {
+        @include a.text-setting("sm");
+        border: 0.0625rem solid a.theme-color("light", "base", -0.6);
+        border-radius: a.$border-radius;
+        padding: 0.375rem;
+        color: a.theme-color("light");
+        line-height: unset;
+        background-color: a.theme-color("foreground", "dark");
+      }
+      > input:focus,
+      > input:focus-visible {
+        outline: none;
+        border-color: a.theme-color("primary");
+        box-shadow: a.$box-shadow;
+      }
+    }
+  }
+}

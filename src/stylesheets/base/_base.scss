@@ -43,11 +43,11 @@ body {
  * Basic styles for links
  */
 a {
-  color: a.$color-primary;
-  text-decoration: none;
+  color: a.theme-color("primary");
+  text-decoration: underline;
 
   @include a.on-event {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -65,4 +65,8 @@ button {
   border: none;
   background-color: unset;
   display: inline-block;
+}
+
+input {
+  display: block;
 }

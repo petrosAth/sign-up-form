@@ -16,9 +16,13 @@ h3 {
   font-family: a.$font-stack-text;
 }
 
-h2,
-h3 {
+h2 {
   @include a.text-setting("md");
+  font-weight: 600;
+}
+
+h3 {
+  @include a.text-setting("base");
 }
 
 a {

@@ -11,7 +11,7 @@
   background-color: a.theme-color("background", "base", -0.3);
 
   h1 {
-    text-transform: capitalize;
+    text-transform: uppercase;
     @include a.text-setting("xl");
     font-family: a.$font-stack-accent;
     color: a.$color-text-light;

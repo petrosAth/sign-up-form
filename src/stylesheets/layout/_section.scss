@@ -2,9 +2,10 @@
 
 .section {
   color: a.theme-color("light", "base");
-  background-color: a.theme-color("background", "base");
+  background-color: a.theme-color("background");
   &__float {
     color: a.theme-color("light", "base");
-    background-color: a.theme-color("background", "light");
+    background-color: a.theme-color("foreground");
+    box-shadow: a.$box-shadow;
   }
 }
