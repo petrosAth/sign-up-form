@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
+@use "sass:color";
 
 /// Regular font family
 /// @type List
@@ -49,7 +50,6 @@ $text-settings: (
 );
 
 // -----------------------------------------------------------------------------
-@use "sass:color";
 
 /// Primary color
 /// @type Color
@@ -82,7 +82,7 @@ $theme-colors: (
     "light": lighten($color-primary, 5),
     "base": $color-primary,
     "dark": darken($color-primary, 5),
-    "disabled": color.adjust($color-primary, $alpha: -0.5),
+    "disabled": color.adjust($color-primary, $alpha: -0.65),
   ),
   "accent": (
     "light": lighten($color-accent, 5),
@@ -99,7 +99,7 @@ $theme-colors: (
   "dark": (
     "light": lighten($color-text-dark, 5),
     "base": $color-text-dark,
-    "dark": darken($color-text-dark, 5),
+    "dark": darken($color-text-dark, 20),
     "disabled": color.adjust($color-text-dark, $alpha: -0.5),
   ),
   "foreground": (

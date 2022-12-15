@@ -41,4 +41,5 @@ body {
 
 button {
   @include a.text-setting("base");
+  font-weight: 700;
 }
