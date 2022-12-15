@@ -42,15 +42,15 @@
             <div class="form__data">
               <div class="form__data__first-name">
                 <label for="form__data__first-name">First Name</label>
-                <input type="text" id="form__data__first-name" name="first_name" />
+                <input type="text" id="form__data__first-name" name="first_name" required="required" />
               </div>
               <div class="form__data__last-name">
                 <label for="form__data__last-name">Last Name</label>
-                <input type="text" id="form__data__last-name" name="last_name" />
+                <input type="text" id="form__data__last-name" name="last_name" required="required" />
               </div>
               <div class="form__data__email">
                 <label for="form__data__email">Email</label>
-                <input type="text" id="form__data__email" name="email" />
+                <input type="email" id="form__data__email" name="email" required="required" />
               </div>
               <div class="form__data__phone-number">
                 <label for="form__data__phone-number">Phone Number</label>
@@ -58,17 +58,24 @@
               </div>
               <div class="form__data__password">
                 <label for="form__data__password">Password</label>
-                <input type="password" id="form__data__password" name="password" />
+                <input type="password" id="form__data__password" name="password" required="required" />
+                <p class="form__data__password__error error error__message">&nbsp;</p>
               </div>
               <div class="form__data__confirm-password">
                 <label for="form__data__confirm-password">Confirm Password</label>
-                <input type="password" id="form__data__confirm-password" name="confirm_password" />
+                <input
+                  type="password"
+                  id="form__data__confirm-password"
+                  name="confirm_password"
+                  required="required"
+                  onfocus="setErrorMsgState(false)"
+                />
               </div>
             </div>
           </form>
         </div>
         <div class="section">
-          <button type="submit" form="form" class="button">Create Account</button>
+          <button type="submit" class="button">Create Account</button>
           <div class="sign-up__info__submit__login">
             <h3>Already have an account? <a href="#">Log in</a></h3>
           </div>

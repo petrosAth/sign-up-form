@@ -26,12 +26,21 @@
         line-height: unset;
         background-color: a.theme-color("foreground", "dark");
         width: 80%;
+
+        &:focus,
+        &:focus-visible {
+          outline: none;
+          border-color: a.theme-color("primary");
+          box-shadow: a.$box-shadow;
+        }
       }
-      > input:focus,
-      > input:focus-visible {
-        outline: none;
-        border-color: a.theme-color("primary");
-        box-shadow: a.$box-shadow;
+      > p {
+        padding-top: 0.25rem;
+        @include a.text-setting("xs");
+      }
+      > .error {
+        color: a.theme-color("error");
+        border-color: a.theme-color("error");
       }
     }
   }

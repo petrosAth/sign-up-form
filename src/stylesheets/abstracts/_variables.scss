@@ -75,6 +75,14 @@ $color-foreground: hsl(196, 95%, 28%);
 /// @type Color
 $color-background: hsl(196, 95%, 18%);
 
+/// Error color
+/// @type Color
+$color-error: hsl(0, 87%, 65%);
+
+/// Success color
+/// @type Color
+$color-success: hsl(120, 50%, 52%);
+
 /// Theme colors
 /// @type table
 $theme-colors: (
@@ -113,6 +121,18 @@ $theme-colors: (
     "base": $color-background,
     "dark": darken($color-background, 5),
     "disabled": color.adjust($color-background, $alpha: -0.5),
+  ),
+  "error": (
+    "light": lighten($color-error, 5),
+    "base": $color-error,
+    "dark": darken($color-error, 5),
+    "disabled": color.adjust($color-error, $alpha: -0.5),
+  ),
+  "success": (
+    "light": lighten($color-success, 5),
+    "base": $color-success,
+    "dark": darken($color-success, 5),
+    "disabled": color.adjust($color-success, $alpha: -0.5),
   ),
 );
 
