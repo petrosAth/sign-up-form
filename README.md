@@ -1,18 +1,19 @@
 # About
 
-A sign-up form for an imaginary service. Build for practicing on HTML form and
-form validation.
+A sign-up form for an imaginary service. Built for practicing on:
 
-# Website
+- SCSS
+  - Used SCSS and the 7-1 structure for styling.
+- HTML
+  - Created a sign-up form
+- JavaScript
+  - Implemented a password match feature for the sign-up form.
+
+## Website
 
 [Live preview](https://petrosath.github.io/sign-up-form/)
 
-# Languages
+## Tools
 
-> HTML
-> CSS(SCSS)
-
-# Tools
-
-> VITE
-> PostCSS
+- VITE
+- PostCSS
