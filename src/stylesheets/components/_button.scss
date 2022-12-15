@@ -12,33 +12,29 @@
   border: 0.125rem solid transparent;
   border-radius: a.$border-radius;
   cursor: pointer;
-}
 
-.button:focus-visible {
-  box-shadow: none;
-  outline: none;
-  border-color: a.theme-color("primary", "light");
-  background-color: a.theme-color("primary", "light");
-}
-
-.button:hover:not(:disabled) {
-  background-color: a.theme-color("primary", "dark");
-  border-color: a.theme-color("primary", "dark");
-}
-
-.button:focus {
-  border-color: a.theme-color("background");
-  outline: 0.0675rem solid a.theme-color("primary");
-}
-
-.button:disabled {
-  background-color: a.theme-color("primary", "disabled");
-  color: a.theme-color("dark", "disabled");
-  cursor: default;
-}
-
-.button:active:not(:disabled) {
-  background-color: a.theme-color("primary", "light");
-  border-color: a.theme-color("primary", "light");
-  outline: none;
+  &:focus-visible {
+    box-shadow: none;
+    outline: none;
+    border-color: a.theme-color("primary", "light");
+    background-color: a.theme-color("primary", "light");
+  }
+  &:hover:not(:disabled) {
+    background-color: a.theme-color("primary", "dark");
+    border-color: a.theme-color("primary", "dark");
+  }
+  &:focus {
+    border-color: a.theme-color("background");
+    outline: 0.0675rem solid a.theme-color("primary");
+  }
+  &:disabled {
+    background-color: a.theme-color("primary", "disabled");
+    color: a.theme-color("dark", "disabled");
+    cursor: default;
+  }
+  &:active:not(:disabled) {
+    background-color: a.theme-color("primary", "light");
+    border-color: a.theme-color("primary", "light");
+    outline: none;
+  }
 }
