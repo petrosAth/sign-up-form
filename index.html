@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/sign-up-form/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/sign-up-form/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/sign-up-form/favicon-16x16.png" />
+    <link rel="manifest" href="/sign-up-form/site.webmanifest" />
+    <link rel="mask-icon" href="/sign-up-form/safari-pinned-tab.svg" color="#04678b" />
+    <meta name="msapplication-TileColor" content="#f3a159" />
+    <meta name="theme-color" content="#dedede" />
+    
+    <script src="./src/scripts/javascript.js" defer></script>
+    <title>Sign up!</title>
+    <link rel="stylesheet" href="/sign-up-form/assets/index.5193c303.css">
+  </head>
+  <body>
+    <div class="sign-up">
+      <div class="background-image-float">
+        <div class="logo-overlay">
+          <div class="logo-overlay__image">
+            <img src="./images/odin-lined.png" alt="" />
+          </div>
+          <div class="logo-overlay__text"><h1>Odin</h1></div>
+        </div>
+        <div class="background-image-float__credit">
+          Photo by
+          <a href="https://unsplash.com/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Tom Barrett</a
+          >
+          on
+          <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
+      </div>
+      <div class="sign-up__info">
+        <div class="section sign-up__info__text">
+          <h2 class="sign-up__info__text__message">
+            This is not a real online service! You know you need something like this in your life to help you realize
+            your deepest dreams.<br />Sign up now to get started.
+          </h2>
+          <h2 class="sign-up__info__text__action">You know you want to.</h2>
+        </div>
+        <div class="section__float sign-up__info__form">
+          <form class="form" id="form">
+            <h2>Let's do this!</h2>
+            <div class="form__data">
+              <div class="form__data__first-name">
+                <label for="form__data__first-name">First Name</label>
+                <input type="text" id="form__data__first-name" name="first_name" required="required" />
+              </div>
+              <div class="form__data__last-name">
+                <label for="form__data__last-name">Last Name</label>
+                <input type="text" id="form__data__last-name" name="last_name" required="required" />
+              </div>
+              <div class="form__data__email">
+                <label for="form__data__email">Email</label>
+                <input type="email" id="form__data__email" name="email" required="required" />
+              </div>
+              <div class="form__data__phone-number">
+                <label for="form__data__phone-number">Phone Number</label>
+                <input type="tel" id="form__data__phone-number" name="phone_number" />
+              </div>
+              <div class="form__data__password">
+                <label for="form__data__password">Password</label>
+                <input type="password" id="form__data__password" name="password" required="required" />
+                <p class="form__data__password__error error error__message">&nbsp;</p>
+              </div>
+              <div class="form__data__confirm-password">
+                <label for="form__data__confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="form__data__confirm-password"
+                  name="confirm_password"
+                  required="required"
+                  onfocus="setErrorMsgState(false)"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="section">
+          <button type="submit" class="button">Create Account</button>
+          <div class="sign-up__info__submit__login">
+            <h3>Already have an account? <a href="#">Log in</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
