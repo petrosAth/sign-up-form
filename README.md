@@ -1,19 +1,19 @@
 # About
 
-A sign-up form for an imaginary service. Built for practicing on:
+A sign-up form for an imaginary service. Build for practicing on several web development tools and languages.
 
-- SCSS
-  - Used SCSS and the 7-1 structure for styling.
-- HTML
-  - Created a sign-up form
-- JavaScript
-  - Implemented a password match feature for the sign-up form.
+## Languages
 
-## Website
-
-[Live preview](https://petrosath.github.io/sign-up-form/)
+- `HTML`: Created a sign-up form
+- `SCSS`: Used for styling utilizing the 7-1 file structure
+- `JavaScript`: Implemented a password match feature for the sign-up form
 
 ## Tools
 
-- VITE
-- PostCSS
+- [`VITE`](https://vitejs.dev/): Used for project management
+- [`PostCSS`](https://postcss.org/)
+  - [`autoprefixer`](https://github.com/postcss/autoprefixer): Used to automatically add vendor prefixes
+
+## Live preview
+
+[sign-up-form](https://petrosath.github.io/sign-up-form/)
