@@ -17,9 +17,9 @@ function isMatch(string, stringMatch) {
 function setErrorMsgState(isError, inputs, msg) {
   if (isError) {
     msg.textContent = "* Passwords do not match";
-    inputs.push(msg, inputs);
-    inputs.forEach((element) => {
-      element.classList.add("error");
+    inputs.push(msg);
+    inputs.forEach((inputs) => {
+      inputs.classList.add("error");
     });
   } else {
     let errorMsg = document.querySelector(".error__message");
@@ -30,6 +30,13 @@ function setErrorMsgState(isError, inputs, msg) {
       element.classList.remove("error");
     });
   }
+}
+
+function watchInput(input) {
+  input.addEventListener("focus", () => {
+    setErrorMsgState(false);
+    input.value = "";
+  });
 }
 
 function passwordValidate(form) {
@@ -43,6 +50,7 @@ function passwordValidate(form) {
   } else {
     let errorMsg = document.querySelector(".form__data__password__error");
     setErrorMsgState(true, [pass, passMatch], errorMsg);
+    watchInput(passMatch);
     form.reportValidity();
   }
 }
